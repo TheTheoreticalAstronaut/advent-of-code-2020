@@ -1,7 +1,7 @@
 import re
 
 class Day2():
-    DATA_FILENAME = "day2_input.dat"
+    DATA_FILENAME = "resources/day2_input.dat"
     inputPattern = "([0-9]+)-([0-9]+)\s+([a-zA-Z]):\s+([a-zA-Z]*)"
 
     def __init__(self):
@@ -15,6 +15,7 @@ class Day2():
                 maxCharInstances = int(secondIndexStr)
                 validPasswords += bool(minCharInstances <= password.count(char) <= maxCharInstances)
         print("Number of valid passwords: {0}".format(validPasswords))
+        return validPasswords
 
     def runPartTwo(self):
         validPasswords = 0
@@ -25,4 +26,6 @@ class Day2():
                 if len(password) > secondIndex:
                     validPasswords += (bool(password[firstIndex] == char) != bool(password[secondIndex] == char))
         print("Number of valid passwords: {0}".format(validPasswords))
+        return validPasswords
+
 

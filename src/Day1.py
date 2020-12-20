@@ -1,7 +1,7 @@
-from FileUtils import readNumbersFromFile
+from src.FileUtils import readNumbersFromFile
 
 class Day1():
-    DATA_FILENAME = "day1_input.dat"
+    DATA_FILENAME = "resources/day1_input.dat"
     targetSum = -1
     targetProduct = -1
     magicNumbers = []
@@ -27,6 +27,7 @@ class Day1():
                 break
 
         self.__printResult()
+        return self.targetProduct
 
     def runPartTwo(self):
         data = readNumbersFromFile(self.DATA_FILENAME)
@@ -52,8 +53,8 @@ class Day1():
                     break
             if self.found:
                 break
-
         self.__printResult()
+        return self.targetProduct
 
     def __printResult(self):
         if self.found:
