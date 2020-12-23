@@ -1,6 +1,7 @@
 import re
 
-class Day2():
+
+class Day2:
     DATA_FILENAME = "resources/day2_input.dat"
     inputPattern = "([0-9]+)-([0-9]+)\s+([a-zA-Z]):\s+([a-zA-Z]*)"
 

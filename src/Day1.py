@@ -1,6 +1,7 @@
 from src.FileUtils import readNumbersFromFile
 
-class Day1():
+
+class Day1:
     DATA_FILENAME = "resources/day1_input.dat"
     targetSum = -1
     targetProduct = -1

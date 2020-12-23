@@ -1,6 +1,6 @@
 
 
-class Day3():
+class Day3:
     DATA_FILENAME = "resources/day3_input.dat"
     patternMatrix = []
 
