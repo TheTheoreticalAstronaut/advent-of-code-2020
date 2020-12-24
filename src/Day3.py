@@ -1,13 +1,15 @@
+from src.Challenge import Challenge
 
 
-class Day3:
+class Day3(Challenge):
     DATA_FILENAME = "resources/day3_input.dat"
     patternMatrix = []
 
     def runPartOne(self):
         self.__getPatternMatrix()
         treesHit = self.__getTreesHit(3,1)
-        print("Number of trees hit: {0}".format(treesHit))
+        if self.verbose:
+            print("Number of trees hit: {0}".format(treesHit))
         return treesHit
 
     def runPartTwo(self):
@@ -18,7 +20,8 @@ class Day3:
         treesHit *= self.__getTreesHit(5, 1)
         treesHit *= self.__getTreesHit(7, 1)
         treesHit *= self.__getTreesHit(1, 2)
-        print("Product of hit trees: {0}".format(treesHit))
+        if self.verbose:
+            print("Product of hit trees: {0}".format(treesHit))
         return treesHit
 
     def __getPatternMatrix(self):

@@ -15,43 +15,53 @@ class TestAdventOfCode2020(unittest.TestCase):
     DAY_4_PART_ONE_SOLUTION = 237
     DAY_4_PART_TWO_SOLUTION = 172
 
+    verbose = False
+
     def testDay1PartOne(self):
         challenge = Day1(2020)
+        challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartOne()
         self.assertEqual(challengeSolution, self.DAY_1_PART_ONE_SOLUTION, "Expected {0}, got {1}".format(self.DAY_1_PART_ONE_SOLUTION, challengeSolution))
 
     def testDay1PartTwo(self):
         challenge = Day1(2020)
+        challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartTwo()
         self.assertEqual(challengeSolution, self.DAY_1_PART_TWO_SOLUTION, "Expected {0}, got {1}".format(self.DAY_1_PART_TWO_SOLUTION, challengeSolution))
 
     def testDay2PartOne(self):
         challenge = Day2()
+        challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartOne()
         self.assertEqual(challengeSolution, self.DAY_2_PART_ONE_SOLUTION, "Expected {0}, got {1}".format(self.DAY_2_PART_ONE_SOLUTION, challengeSolution))
 
     def testDay2PartTwo(self):
         challenge = Day2()
+        challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartTwo()
         self.assertEqual(challengeSolution, self.DAY_2_PART_TWO_SOLUTION, "Expected {0}, got {1}".format(self.DAY_2_PART_TWO_SOLUTION, challengeSolution))
 
     def testDay3PartOne(self):
         challenge = Day3()
+        challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartOne()
         self.assertEqual(challengeSolution, self.DAY_3_PART_ONE_SOLUTION, "Expected {0}, got {1}".format(self.DAY_3_PART_ONE_SOLUTION, challengeSolution))
 
     def testDay3PartTwo(self):
         challenge = Day3()
+        challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartTwo()
         self.assertEqual(challengeSolution, self.DAY_3_PART_TWO_SOLUTION, "Expected {0}, got {1}".format(self.DAY_3_PART_TWO_SOLUTION, challengeSolution))
 
     def testDay4PartOne(self):
         challenge = Day4()
+        challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartOne()
         self.assertEqual(challengeSolution, self.DAY_4_PART_ONE_SOLUTION, "Expected {0}, got {1}".format(self.DAY_4_PART_ONE_SOLUTION, challengeSolution))
 
     def testDay4PartTwo(self):
         challenge = Day4()
+        challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartTwo()
         self.assertEqual(challengeSolution, self.DAY_4_PART_TWO_SOLUTION, "Expected {0}, got {1}".format(self.DAY_4_PART_TWO_SOLUTION, challengeSolution))
 

@@ -1,7 +1,8 @@
+from src.Challenge import Challenge
 from src.FileUtils import readNumbersFromFile
 
 
-class Day1:
+class Day1(Challenge):
     DATA_FILENAME = "resources/day1_input.dat"
     targetSum = -1
     targetProduct = -1
@@ -58,6 +59,8 @@ class Day1:
         return self.targetProduct
 
     def __printResult(self):
+        if not self.verbose:
+            return
         if self.found:
             print("The magic numbers are {0}".format(self.magicNumbers))
             print("Their product is {0}".format(self.targetProduct))
