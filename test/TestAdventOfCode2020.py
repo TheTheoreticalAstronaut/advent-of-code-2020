@@ -3,6 +3,7 @@ from src.Day1 import Day1
 from src.Day2 import Day2
 from src.Day3 import Day3
 from src.Day4 import Day4
+from src.Day5 import Day5
 
 
 class TestAdventOfCode2020(unittest.TestCase):
@@ -14,7 +15,8 @@ class TestAdventOfCode2020(unittest.TestCase):
     DAY_3_PART_TWO_SOLUTION = 2983070376
     DAY_4_PART_ONE_SOLUTION = 237
     DAY_4_PART_TWO_SOLUTION = 172
-
+    DAY_5_PART_ONE_SOLUTION = 888
+    DAY_5_PART_TWO_SOLUTION = 522
     verbose = False
 
     def testDay1PartOne(self):
@@ -64,6 +66,18 @@ class TestAdventOfCode2020(unittest.TestCase):
         challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartTwo()
         self.assertEqual(challengeSolution, self.DAY_4_PART_TWO_SOLUTION, "Expected {0}, got {1}".format(self.DAY_4_PART_TWO_SOLUTION, challengeSolution))
+
+    def testDay5PartOne(self):
+        challenge = Day5()
+        challenge.setVerbose(self.verbose)
+        challengeSolution = challenge.runPartOne()
+        self.assertEqual(challengeSolution, self.DAY_5_PART_ONE_SOLUTION, "Expected {0}, got {1}".format(self.DAY_5_PART_ONE_SOLUTION, challengeSolution))
+
+    def testDay5PartTwo(self):
+        challenge = Day5()
+        challenge.setVerbose(self.verbose)
+        challengeSolution = challenge.runPartTwo()
+        self.assertEqual(challengeSolution, self.DAY_5_PART_TWO_SOLUTION, "Expected {0}, got {1}".format(self.DAY_5_PART_TWO_SOLUTION, challengeSolution))
 
 if __name__ == '__main__':
     unittest.main()
