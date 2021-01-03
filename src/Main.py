@@ -6,12 +6,13 @@ from Day5 import Day5
 from Day6 import Day6
 from Day7 import Day7
 from Day8 import Day8
+from Day9 import Day9
 from time import time
 
 if __name__ == '__main__':
     startTime = time()
-    challenge = Day8()
-    challenge.runPartTwo()
+    challenge = Day9()
+    challenge.runPartOne()
     endTime = time()
     print("Execution took {0}ms".format(1000*(endTime - startTime)))
 

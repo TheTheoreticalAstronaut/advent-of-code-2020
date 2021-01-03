@@ -7,6 +7,7 @@ from src.Day5 import Day5
 from src.Day6 import Day6
 from src.Day7 import Day7
 from src.Day8 import Day8
+from src.Day9 import Day9
 
 
 class TestAdventOfCode2020(unittest.TestCase):
@@ -26,6 +27,7 @@ class TestAdventOfCode2020(unittest.TestCase):
     DAY_7_PART_TWO_SOLUTION = 58175
     DAY_8_PART_ONE_SOLUTION = 1610
     DAY_8_PART_TWO_SOLUTION = 1703
+    DAY_9_PART_ONE_SOLUTION = 15353384
     verbose = False
 
     def testDay1PartOne(self):
@@ -123,6 +125,12 @@ class TestAdventOfCode2020(unittest.TestCase):
         challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartTwo()
         self.assertEqual(challengeSolution, self.DAY_8_PART_TWO_SOLUTION, "Expected {0}, got {1}".format(self.DAY_8_PART_TWO_SOLUTION, challengeSolution))
+
+    def testDay9PartOne(self):
+        challenge = Day9()
+        challenge.setVerbose(self.verbose)
+        challengeSolution = challenge.runPartOne()
+        self.assertEqual(challengeSolution, self.DAY_9_PART_ONE_SOLUTION, "Expected {0}, got {1}".format(self.DAY_9_PART_ONE_SOLUTION, challengeSolution))
 
 
 if __name__ == '__main__':
