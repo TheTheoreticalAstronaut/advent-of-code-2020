@@ -28,6 +28,7 @@ class TestAdventOfCode2020(unittest.TestCase):
     DAY_8_PART_ONE_SOLUTION = 1610
     DAY_8_PART_TWO_SOLUTION = 1703
     DAY_9_PART_ONE_SOLUTION = 15353384
+    DAY_9_PART_TWO_SOLUTION = 2466556
     verbose = False
 
     def testDay1PartOne(self):
@@ -131,6 +132,12 @@ class TestAdventOfCode2020(unittest.TestCase):
         challenge.setVerbose(self.verbose)
         challengeSolution = challenge.runPartOne()
         self.assertEqual(challengeSolution, self.DAY_9_PART_ONE_SOLUTION, "Expected {0}, got {1}".format(self.DAY_9_PART_ONE_SOLUTION, challengeSolution))
+
+    def testDay9PartTwo(self):
+        challenge = Day9()
+        challenge.setVerbose(self.verbose)
+        challengeSolution = challenge.runPartTwo()
+        self.assertEqual(challengeSolution, self.DAY_9_PART_TWO_SOLUTION, "Expected {0}, got {1}".format(self.DAY_9_PART_TWO_SOLUTION, challengeSolution))
 
 
 if __name__ == '__main__':

@@ -23,7 +23,23 @@ class Day9(Challenge):
         return -1
 
     def runPartTwo(self) -> int:
-        pass
+        firstLineFailingSumRule = 502  # From part one
+        valueFailingSumRule = self._input[firstLineFailingSumRule]
+        currentSum = self._input[firstLineFailingSumRule-1]
+        currentSequence = [self._input[firstLineFailingSumRule-1]]
+        for lastTerm in self._input[firstLineFailingSumRule-2::-1]:
+            currentSequence.append(lastTerm)
+            currentSum += lastTerm
+            if currentSum > valueFailingSumRule:
+                currentSum -= currentSequence.pop(0)
+            if currentSum == valueFailingSumRule and len(currentSequence) != 1:
+                return self._foundSequence(currentSequence)
+
+    def _foundSequence(self, sequence):
+        sumMinMaxInSequence = max(sequence) + min(sequence)
+        if self.verbose:
+            print("The sum of the min and max values in the sequence is: {0}".format(sumMinMaxInSequence))
+        return sumMinMaxInSequence
 
     def _readInput(self) -> None:
         with open(self.DATA_FILENAME, "r") as file:
